@@ -27,4 +27,4 @@ let low = 5
 let high = 10
 
 console.log(Math.floor(Math.random()*(high-low+1)+low))
-// To get Value between low and high
+// To get Value between low and high numbers
