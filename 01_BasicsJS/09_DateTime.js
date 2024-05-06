@@ -15,7 +15,7 @@ console.log(now.getSeconds())
 console.log(now.getMinutes())
 console.log(now.getHours())
 
-// Printing Today's Date with readable method
+// Printing Today's Date with readable method // Muzamil 
 console.log(now.getDate() + "/" + (now.getMonth()+1) + "/" + now.getFullYear());
 console.log(now.toLocaleString())
 console.log(now.toDateString())
