@@ -58,3 +58,16 @@ console.log(Object.entries(laptop)) // Change Object into Array
 
 // To verify value
 console.log(laptop.hasOwnProperty("specifications")); // Expected output : true
+
+
+// De-structuring
+const new_laptop = {
+    company : "Apple",
+    model : 10,
+    price : 999
+}
+
+console.log(laptop.company)
+    // OR
+const {company : office} = laptop;
+console.log(office)
