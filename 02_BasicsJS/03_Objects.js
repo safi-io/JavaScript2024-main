@@ -30,4 +30,4 @@ console.log(new_car);
 
 // Function in an object
 
-console.log(new_car.start()) // Calling Function from the object already defineds
+console.log(new_car.start()) // Calling Function from the object already defined above
