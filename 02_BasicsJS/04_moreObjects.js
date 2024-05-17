@@ -67,7 +67,7 @@ const new_laptop = {
     price : 999
 }
 
-console.log(laptop.company)
+console.log(new_laptop.company)
     // OR
-const {company : office} = laptop;
+const {company : office} = new_laptop;
 console.log(office)
