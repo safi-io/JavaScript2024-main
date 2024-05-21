@@ -5,8 +5,9 @@ for(let num of numbers) {
 }
 
 let greetings = "Hello World!";
+
 for(let greet of greetings) {
-    if(greet==" ") {
+    if(greet == " ") {
         continue;
     }
     console.log(greet)
