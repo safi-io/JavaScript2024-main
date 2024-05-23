@@ -7,6 +7,7 @@ while(index<=10) {
 }
 
     // Basic Structure of Do-While Loop
+    
 let i = 0;
 do{ // It will run atleast one time, without checking condition
     console.log(i);
