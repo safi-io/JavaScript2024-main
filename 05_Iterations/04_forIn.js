@@ -1,4 +1,5 @@
-// a for...in loop in JavaScript lets you loop through all the properties inside an object one by one.
+// a for...in loop in JavaScript lets you loop through all the properties
+// inside an object one by one.
 
 const new_laptop = {
     price : 40,
