@@ -19,3 +19,17 @@ new_div.appendChild(newText)
 
 // Appending
 document.body.appendChild(new_div)
+
+//+++++++++++++++++++++++++++++ Playing with LI++++++++++++++
+
+
+    // Adding 
+    
+liAdder = (lang) => {
+    let new_li = document.createElement("li");  
+    new_li.innerText = `${lang}`;
+    document.querySelector(".language").appendChild(new_li)
+}
+
+liAdder("Python");
+liAdder("Ruby");
