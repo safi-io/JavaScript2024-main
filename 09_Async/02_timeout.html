@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Set Timeout</title>
+</head>
+<body>
+    <h1>I love DEVELOPMENT</h1>
+    <button>STOP</button>
+</body>
+
+
+<script>
+
+    /*
+    The setTimeout() method calls a function
+    after a number of milliseconds.
+    1 second = 1000ms.
+    It is executed only once.
+    */
+
+    let heading = document.querySelector('h1');
+    let btn = document.querySelector('button');
+
+    changeText = () => {
+        heading.innerHTML = `I love DSA`;
+    }
+
+    const change = setTimeout(changeText, 2000) // Just give Reference.
+
+    btn.addEventListener("click", ()=> {
+        clearTimeout(change); // Now, Text will not change.
+    })
+
+
+</script>
+</html>
