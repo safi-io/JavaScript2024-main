@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval</title>
+</head>
+<body>
+    <p>Console Printing</p>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+</body>
+
+
+    <script>
+        let para = document.querySelector("p");
+        let start = document.querySelector("#start");
+        let stop = document.querySelector("#stop");
+
+        function sayName(str) {
+            console.log(`Safi Loves ${str}`);
+        }
+
+        start.addEventListener("click", ()=> {
+            const intervalRef = setInterval(sayName, 1500, "FAANG");
+            stop.addEventListener("click", ()=> {
+            clearInterval(intervalRef) })
+        })
+
+        
+
+
+    </script>
+</html>
