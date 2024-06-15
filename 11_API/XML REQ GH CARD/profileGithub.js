@@ -1,5 +1,5 @@
 const mainIMG = document.querySelector("img");
-const followers = document.querySelector("h1"); 
+const followers = document.querySelector("h1");
 const input = document.querySelector("input");
 const button = document.querySelector("button");
 
@@ -11,7 +11,7 @@ button.addEventListener("click", () => {
         alert("Please enter a GitHub username");
         return;
     }
-    
+
     apiURL = `https://api.github.com/users/${username}`;
 
     const xhr = new XMLHttpRequest();
@@ -22,19 +22,19 @@ button.addEventListener("click", () => {
 
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
-                let data = JSON.parse(xhr.responseText);
-                for (let result in data) {
-                    if (result === "avatar_url") {
-                        picURL = `${data[result]}`;
-                    }
-                    if (result === "followers") {
-                        followersNumber = `${data[result]}`;
-                    }
-                    if (picURL && followersNumber) {
-                        break;  // Exit loop early if both values are found
-                    }
+            let data = JSON.parse(xhr.responseText);
+            for (let result in data) {
+                if (result === "avatar_url") {
+                    picURL = `${data[result]}`;
                 }
-                card();
+                if (result === "followers") {
+                    followersNumber = `${data[result]}`;
+                }
+                if (picURL && followersNumber) {
+                    break;  // Exit loop early if both values are found
+                }
+            }
+            card();
         }
     }
 
