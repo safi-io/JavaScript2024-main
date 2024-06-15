@@ -22,7 +22,6 @@ button.addEventListener("click", () => {
 
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
-            if (xhr.status === 200) {  // Check if the request was successful
                 let data = JSON.parse(xhr.responseText);
                 for (let result in data) {
                     if (result === "avatar_url") {
@@ -36,17 +35,13 @@ button.addEventListener("click", () => {
                     }
                 }
                 card();
-            } else {
-                alert('Error fetching data. Please check the username and try again.');
-                console.error('Error fetching data:', xhr.statusText);
-            }
         }
     }
 
     function card() {
         if (mainIMG && followers) {  // Check if elements exist
-            mainIMG.setAttribute("src", picURL || '');
-            followers.innerHTML = `Your followers are ${followersNumber || 0}`;
+            mainIMG.setAttribute("src", picURL);
+            followers.innerHTML = `Your followers are ${followersNumber}`;
         } else {
             console.error('Required elements are not found in the DOM.');
         }
