@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Event Project</title>
+  </head>
+  <body>
+    <div class="main">
+      <p>---Press any Key to see Details---</p>
+    </div>
+  </body>
+
+  <script>
+    let main = document.querySelector(".main");
+    window.addEventListener("keydown", (e) => {
+
+      main.innerHTML = `
+        <table style="width: 50%; border-collapse: collapse; margin: 20px auto; font-family: Arial, sans-serif; text-align: center;">
+            <tr style="background-color: #f2f2f2;">
+                <th style="border: 1px solid #dddddd; padding: 8px;">KEY</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">KEY CODE</th>
+                <th style="border: 1px solid #dddddd; padding: 8px;">CODE</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #dddddd; padding: 8px;">${e.key === " " ? "space" : e.key}</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">${e.keyCode}</td>
+                <td style="border: 1px solid #dddddd; padding: 8px;">${e.code}</td>
+            </tr>
+        </table>
+
+        `;
+    });
+  </script>
+</html>
