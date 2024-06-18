@@ -3,7 +3,7 @@
 // BTS ( new keyword )
 
 class phone {
-    constructor(model, price, color) { // Automatically called
+    constructor(model, price, color) { // Automatically called. when object is created
         this.model = model;
         this.price = price;
         this.color = color;
