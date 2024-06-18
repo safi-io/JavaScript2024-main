@@ -1,0 +1,1 @@
+// A constructor function is a special type of function used to create and initialize objects. When called with the new keyword, it sets up the properties and methods of the new object and returns it. They are fundamental part of JS OOP capabilities.
