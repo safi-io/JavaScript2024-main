@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure HTML</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <button id="purple">Purple Body Color</button>
+    <button id="magenta">Magenta Body Color</button>
+</body>
+    <script>
+
+        // ~~~~~~Conceptual
+
+        // function mainFunc() {
+        //     function notMainFunc() {
+        //         console.log(`I am from "not main function".`);
+        //     }
+        //     return notMainFunc;
+        // }
+
+        // let result = mainFunc();
+        // result();
+
+        // ~~~~~~Practical 
+
+
+        function eventHandler(color) {
+            return function() {
+                document.body.style.backgroundColor = `${color}`;
+            }
+        }
+
+        document.getElementById("purple").onclick = eventHandler("purple"); // Use of Closure and Lexical Scoping
+        document.getElementById("magenta").onclick = eventHandler("magenta");
+
+
+    </script>
+</html>

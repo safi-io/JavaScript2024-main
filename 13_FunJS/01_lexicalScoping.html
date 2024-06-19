@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical Scoping HTML</title>
+</head>
+<body>
+    <!-- Lexical Scope refers to the region of the code where a variable is defined and accessible.  -->
+    
+</body>
+    <script>
+        function outer() {
+            let outerVal = "value outside";
+            inner = ()=> {
+                let innerVal = "value inside";
+                console.log(outerVal); // Can be accessed
+            }
+            //console.log(innerVal); // Can't be accessed
+            inner();
+        }
+        outer();
+    </script>
+</html>
