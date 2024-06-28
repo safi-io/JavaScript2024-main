@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: #efd6ac;
+  user-select: none;
+}
+
+body {
+  background-color: #04151f;
+}
+
+div.main {
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul {
+  margin-top: 20px;
+  background-color: #183a37;
+  border-radius: 10px;
+  width: 70%;
+  height: 400px;
+}
+
+li {
+  padding: 15px;
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.75rem;
+  border-width: 2px;
+  border-color: #ffffff;
+  border-style: solid;
+  font-size: 1rem;
+  background: #183A37;
+}
+
+button:hover {
+    background: #efd6ac;
+    color: #183A37;
+}
+
+input {
+    border: none;
+    color : #183A37;
+    height: 40px;
+    width: 300px;
+    padding-left: 10px;
+}
+
+input::placeholder {
+    padding-left: 1px;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+#overlay {
+  width: 70%;
+  background-color: rgba(64, 63, 63, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding-top : 10px;
+}
+
+.overlay {
+  margin-top: 10px;
+}
